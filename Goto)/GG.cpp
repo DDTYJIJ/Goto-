@@ -205,6 +205,8 @@ int main()
 }*/
 
 
+//----------------------------------------------------------------------\\
+// Задание 1
 int main()
 {
     SetConsoleCP(CP_UTF8);
@@ -231,7 +233,7 @@ int main()
 
     std::cout << "Введите счастливое число из 6 символов числа\n";
     std::cin >> number;
-    if (number > 1000000 || number < 100000)
+    if (number > 999999 || number < 100000)
     {
         std::cout << "Ошибка введите корректно\n";
     }
@@ -273,6 +275,171 @@ int main()
             std::cout << "Это число не счастливое\n";
         }     
     }
+
+    return 0;
+}
+
+
+//----------------------------------------------------------------------\\
+
+
+// Задание 2
+
+int main()
+{
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8); //		1251
+    srand(time(NULL));
+
+    int number;
+
+    int number12;
+    int number12A;
+    int number12B;
+
+    int number34;
+    int number34A;
+    int number34B;
+
+
+
+    std::cout << "Введите четырехзначное число\n";
+    std::cin >> number;
+
+    if (number > 9999 || number < 1000)
+    {
+        std::cout << "Ошибка введите корректно";
+    }
+    else
+    {
+        number12 = number / 100;
+
+        number12A = number12 / 10;
+
+        number12B = number12 % 10;
+
+
+        number34 = number % 100;
+
+        number34A = number34 / 10;
+
+        number34B = number34 % 10;
+
+
+        std::cout << number34A << number34B << number12A << number12B;
+
+    }
+
+
+
+
+    return 0;
+}
+
+
+//----------------------------------------------------------------------\\
+// Задание 3
+
+int main()
+{
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8); //		1251
+    srand(time(NULL));
+
+    int number1234;
+    int number1234A;
+
+    int number1234B;
+    int numberB;
+
+    int number1234C;
+    int numberC;
+
+    int number1234D;
+
+    int number567;
+    int number567A;
+
+    int number567B;
+    int numberBR;
+
+    int number567C;
+
+    int number;
+
+
+
+    std::cout << "Введите семезначное число\n";
+    std::cin >> number;
+
+    if (number > 9999999 || number < 1000000)
+    {
+        std::cout << "Ошибка введите корректно";
+    }
+    else
+    {
+        number1234 = number / 1000;
+
+
+   
+
+        number1234A = number1234 / 1000;
+
+        numberB = number1234 / 100;
+        number1234B = numberB % 10;
+
+        numberC = number1234 % 100;
+        number1234C = numberC / 10;
+
+        number1234D = number1234 % 10;
+
+        //-------------------------\\
+
+        number567 = number % 1000;
+
+
+        number567A = number567 / 100;
+
+        numberBR = number567 / 10;
+
+        number567B = numberBR % 10;
+
+        number567C = number567 % 10;
+
+
+        if (number1234A > number1234B && number1234A > number1234C && number1234A > number1234D && number1234A > number567A && number1234A > number567B && number1234A > number567C)
+        {
+            std::cout << "Самое большое число " << number1234A;
+        }
+        else if (number1234B > number1234A && number1234B > number1234C && number1234B > number1234D && number1234B > number567A && number1234B > number567B && number1234B > number567C)
+        {
+            std::cout << "Самое большое число " << number1234B;
+        }
+        else if (number1234C > number1234A && number1234C > number1234B && number1234C > number1234D && number1234C > number567A && number1234C > number567B && number1234C > number567C)
+        {
+            std::cout << "Самое большое число " << number1234C;
+        }
+        else if (number1234D > number1234A && number1234D > number1234B && number1234D > number1234C && number1234D > number567A && number1234D > number567B && number1234D > number567C)
+        {
+            std::cout << "Самое большое число " << number1234D;
+        }
+        else if (number567A > number1234A && number567A > number1234B && number567A > number1234C && number567A > number1234D && number567A > number567B && number567A > number567C)
+        {
+            std::cout << "Самое большое число " << number567A;
+        }
+        else if (number567B > number1234A && number567B > number1234B && number567B > number1234C && number567B > number1234D && number567B > number567A && number567B > number567C)
+        {
+            std::cout << "Самое большое число " << number567B;
+        }
+        else if (number567C > number1234A && number567C > number1234B && number567C > number1234C && number567C > number1234D && number567C > number567A && number567C > number567B)
+        {
+            std::cout << "Самое большое число " << number567C;
+        }
+       
+
+    }
+    
+
 
     return 0;
 }
