@@ -202,17 +202,20 @@ int main()
     std::cout << std::endl;
 
     return 0;
-}*/
 
 
-//----------------------------------------------------------------------\\
+
+
+
+
+    //----------------------------------------------------------------------\\
 // Задание 1
 int main()
 {
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8); //		1251
     srand(time(NULL));
-    
+
     int number123;
     int number123A;
     int number123B;
@@ -229,7 +232,7 @@ int main()
     int number;
     int number1;
     int number2;
-    
+
 
     std::cout << "Введите счастливое число из 6 символов числа\n";
     std::cin >> number;
@@ -240,9 +243,9 @@ int main()
     else
     {
         number123 = number / 1000; //Первые три числа
-        
+
         number123A = number123 / 100;
-        
+
         numberB = number123 / 10;
         number123B = numberB % 10;
 
@@ -273,7 +276,7 @@ int main()
         else
         {
             std::cout << "Это число не счастливое\n";
-        }     
+        }
     }
 
     return 0;
@@ -381,7 +384,7 @@ int main()
         number1234 = number / 1000;
 
 
-   
+
 
         number1234A = number1234 / 1000;
 
@@ -435,11 +438,209 @@ int main()
         {
             std::cout << "Самое большое число " << number567C;
         }
-       
+
 
     }
-    
+
 
 
     return 0;
 }
+
+}*/
+
+int main()
+{
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8); //		1251
+    srand(time(NULL));
+
+    // ЗАДАНИЕ 1 (Счастливое число из 6 символов)
+  
+    int t1_number123;
+    int t1_number123A;
+    int t1_number123B;
+    int t1_numberB;
+    int t1_number123C;
+
+    int t1_number456;
+    int t1_number456A;
+    int t1_number456B;
+    int t1_numberBR;
+    int t1_number456C;
+
+    int t1_number;
+    int t1_number1;
+    int t1_number2;
+
+    std::cout << "Введите счастливое число из 6 символов числа\n";
+    std::cin >> t1_number;
+    if (t1_number > 999999 || t1_number < 100000)
+    {
+        std::cout << "Ошибка введите корректно\n";
+    }
+    else
+    {
+        t1_number123 = t1_number / 1000; //Первые три числа
+
+        t1_number123A = t1_number123 / 100;
+
+        t1_numberB = t1_number123 / 10;
+        t1_number123B = t1_numberB % 10;
+
+        t1_number123C = t1_number123 % 10;
+
+        t1_number1 = t1_number123A + t1_number123B + t1_number123C;
+
+        //--------------------\\
+
+        t1_number456 = t1_number % 1000; //Последнии три числа
+
+        t1_number456A = t1_number456 / 100;
+
+        t1_numberBR = t1_number456 / 10;
+        t1_number456B = t1_numberBR % 10;
+
+        t1_number456C = t1_number456 % 10;
+
+        t1_number2 = t1_number456A + t1_number456B + t1_number456C;
+
+        //--------------------\\
+
+        if (t1_number1 == t1_number2)
+        {
+            std::cout << "Это число счастливое\n";
+        }
+        else
+        {
+            std::cout << "Это число не счастливое\n";
+        }
+    }
+
+
+    //    // ЗАДАНИЕ 2 (Четырехзначное число)
+
+    int t2_number;
+
+    int t2_number12;
+    int t2_number12A;
+    int t2_number12B;
+
+    int t2_number34;
+    int t2_number34A;
+    int t2_number34B;
+
+    std::cout << "\nВведите четырехзначное число\n";
+    std::cin >> t2_number;
+
+    if (t2_number > 9999 || t2_number < 1000)
+    {
+        std::cout << "Ошибка введите корректно\n";
+    }
+    else
+    {
+        t2_number12 = t2_number / 100;
+
+        t2_number12A = t2_number12 / 10;
+
+        t2_number12B = t2_number12 % 10;
+
+        t2_number34 = t2_number % 100;
+
+        t2_number34A = t2_number34 / 10;
+
+        t2_number34B = t2_number34 % 10;
+
+        std::cout << t2_number34A << t2_number34B << t2_number12A << t2_number12B << "\n";
+    }
+
+
+    // ЗАДАНИЕ 3 (Семизначное число)
+
+    int t3_number1234;
+    int t3_number1234A;
+
+    int t3_number1234B;
+    int t3_numberB;
+
+    int t3_number1234C;
+    int t3_numberC;
+
+    int t3_number1234D;
+
+    int t3_number567;
+    int t3_number567A;
+
+    int t3_number567B;
+    int t3_numberBR;
+
+    int t3_number567C;
+
+    int t3_number;
+
+    std::cout << "\nВведите семезначное число\n";
+    std::cin >> t3_number;
+
+    if (t3_number > 9999999 || t3_number < 1000000)
+    {
+        std::cout << "Ошибка введите корректно\n";
+    }
+    else
+    {
+        t3_number1234 = t3_number / 1000;
+
+        t3_number1234A = t3_number1234 / 1000;
+
+        t3_numberB = t3_number1234 / 100;
+        t3_number1234B = t3_numberB % 10;
+
+        t3_numberC = t3_number1234 % 100;
+        t3_number1234C = t3_numberC / 10;
+
+        t3_number1234D = t3_number1234 % 10;
+
+        //-------------------------\\
+
+        t3_number567 = t3_number % 1000;
+
+        t3_number567A = t3_number567 / 100;
+
+        t3_numberBR = t3_number567 / 10;
+
+        t3_number567B = t3_numberBR % 10;
+
+        t3_number567C = t3_number567 % 10;
+
+        if (t3_number1234A > t3_number1234B && t3_number1234A > t3_number1234C && t3_number1234A > t3_number1234D && t3_number1234A > t3_number567A && t3_number1234A > t3_number567B && t3_number1234A > t3_number567C)
+        {
+            std::cout << "Самое большое число " << t3_number1234A << "\n";
+        }
+        else if (t3_number1234B > t3_number1234A && t3_number1234B > t3_number1234C && t3_number1234B > t3_number1234D && t3_number1234B > t3_number567A && t3_number1234B > t3_number567B && t3_number1234B > t3_number567C)
+        {
+            std::cout << "Самое большое число " << t3_number1234B << "\n";
+        }
+        else if (t3_number1234C > t3_number1234A && t3_number1234C > t3_number1234B && t3_number1234C > t3_number1234D && t3_number1234C > t3_number567A && t3_number1234C > t3_number567B && t3_number1234C > t3_number567C)
+        {
+            std::cout << "Самое большое число " << t3_number1234C << "\n";
+        }
+        else if (t3_number1234D > t3_number1234A && t3_number1234D > t3_number1234B && t3_number1234D > t3_number1234C && t3_number1234D > t3_number567A && t3_number1234D > t3_number567B && t3_number1234D > t3_number567C)
+        {
+            std::cout << "Самое большое число " << t3_number1234D << "\n";
+        }
+        else if (t3_number567A > t3_number1234A && t3_number567A > t3_number1234B && t3_number567A > t3_number1234C && t3_number567A > t3_number1234D && t3_number567A > t3_number567B && t3_number567A > t3_number567C)
+        {
+            std::cout << "Самое большое число " << t3_number567A << "\n";
+        }
+        else if (t3_number567B > t3_number1234A && t3_number567B > t3_number1234B && t3_number567B > t3_number1234C && t3_number567B > t3_number1234D && t3_number567B > t3_number567A && t3_number567B > t3_number567C)
+        {
+            std::cout << "Самое большое число " << t3_number567B << "\n";
+        }
+        else if (t3_number567C > t3_number1234A && t3_number567C > t3_number1234B && t3_number567C > t3_number1234C && t3_number567C > t3_number1234D && t3_number567C > t3_number567A && t3_number567C > t3_number567B)
+        {
+            std::cout << "Самое большое число " << t3_number567C << "\n";
+        }
+    }
+
+    return 0;
+}
+
