@@ -447,7 +447,6 @@ int main()
     return 0;
 }
 
-}*/
 
 int main()
 {
@@ -456,7 +455,7 @@ int main()
     srand(time(NULL));
 
     // ЗАДАНИЕ 1 (Счастливое число из 6 символов)
-  
+
     int t1_number123;
     int t1_number123A;
     int t1_number123B;
@@ -643,4 +642,171 @@ int main()
 
     return 0;
 }
+
+
+
+}*/
+
+int main()
+{
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8); //		1251
+    srand(time(NULL));
+
+
+    
+    const int size = 10;
+    int AM[size];
+    int min = 9;
+    int max = -1;
+
+
+    int randomNumber = rand() % 10;
+
+
+    for (int i = 0; i < 10; i++)
+    {
+        AM[i] = rand() % 10;
+        if (AM[i] < min) min = AM[i];
+        if (AM[i] > max) max = AM[i];
+
+        std::cout << AM[i] << " ";
+
+    }
+    std::cout << " \n";
+    std::cout << "Минимальное " << min << " \n";
+    std::cout << "Максимальное " << max << " \n\n\n\n";
+    
+    //-------------------------------\\
+
+
+
+
+
+    
+    int NumberMin = 0;
+    int NumberMax = 0;
+    int Element = 0;
+    int SumAN2 = 0;
+
+    std::cout << "Введите минимальное число" << " \n";
+    std::cin >> NumberMin;
+    std::cout << "Введите максимальное число диапазона " << " \n";
+    std::cin >> NumberMax;
+
+    const int size_AN2 = 10;
+    int AN2[size_AN2];
+
+        
+    std::cout << "Сгенерированный массив: ";
+    for (int g = 0; g < size_AN2; g++)
+    {
+            
+            AN2[g] = NumberMin + rand() % (NumberMax - NumberMin + 1);
+            std::cout << AN2[g] << " ";
+    }
+    std::cout << "\n\n";
+
+        
+    std::cout << "Введите элемент-критерий: " << " \n";
+    std::cin >> Element;
+    for (int i = 0; i < size_AN2; i++)
+    {
+        if (AN2[i] < Element)
+        {
+                SumAN2 += AN2[i];
+        }
+    }
+    std::cout << "Сумма элементов меньше " << Element << " равна: " << SumAN2 << "\n";
+
+        
+    //-------------------------------\\
+
+        int Pribili12 = 0;
+        int Pribili = 0;
+        int numbers0 = 0;
+
+
+        std::cout << "Введите прибыль за 12 месяцев:  ";
+        std::cin >> Pribili12;
+
+        Pribili = Pribili12 / 12;
+
+
+        
+        const int sizePr = 12;
+        int arrPr[sizePr];
+
+        for (int f = 0; f < 12; f++)
+        {
+         
+
+            if (Pribili > 0) {
+                arrPr[f] = (Pribili / 2) + rand() % Pribili;
+            }
+            else {
+                arrPr[f] = 0;
+            }
+
+
+
+            numbers0 = arrPr[f];
+        }
+
+       
+        for (int h = 0; h < sizePr; h++)
+        {
+            std::cout << arrPr[h] << " ";
+        }
+        std::cout << "\n";
+
+
+        int startMonth = 0;
+        int endMonth = 0;
+        std::cout << "Введите начальный месяц диапазона: ";
+        std::cin >> startMonth;
+        std::cout << "Введите конечный месяц диапазона: ";
+        std::cin >> endMonth;
+
+        
+        int startIndex = startMonth - 1;
+        int endIndex = endMonth - 1;
+
+        
+        int maxProfit = arrPr[startIndex];
+        int minProfit = arrPr[startIndex];
+        int maxMonth = startMonth;
+        int minMonth = startMonth;
+
+        
+        for (int i = startIndex; i <= endIndex; i++)
+        {
+            
+            if (arrPr[i] > maxProfit)
+            {
+                maxProfit = arrPr[i];
+                maxMonth = i + 1;
+            }
+
+            
+            if (arrPr[i] < minProfit)
+            {
+                minProfit = arrPr[i];
+                minMonth = i + 1;
+            }
+        }
+
+        
+        std::cout << "\nРезультаты анализа диапазона с " << startMonth << " по " << endMonth << " месяц\n";
+        std::cout << "Месяц с максимальной прибылью: " << maxMonth << " (Прибыль: " << maxProfit << ")\n";
+        std::cout << "Месяц с минимальной прибылью: " << minMonth << " (Прибыль: " << minProfit << ")\n";
+
+
+        
+
+
+    return 0;
+   
+}
+
 
